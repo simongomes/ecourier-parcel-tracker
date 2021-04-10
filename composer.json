@@ -1,0 +1,20 @@
+{
+    "name": "simongomes/ecourier-parcel-tracker",
+    "description": "eCourier Parcel Tracker WordPress plugin.",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Simon Gomes",
+            "email": "busy.s.simon@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "SimonGomes\\EPT\\": "includes/"
+      },
+      "files": []
+    }
+}
