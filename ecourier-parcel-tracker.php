@@ -17,7 +17,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
-require_once __DIR__ . '/vendor/autoload.php';
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
+}
 
 /**
  * The main plugin class.
@@ -26,7 +28,12 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 final class Ecourier_Parcel_Tracker {
 
-	const VERSION = '1.0.1';
+	/**
+	 * Plugin version
+	 *
+	 * @var string
+	 */
+	const VERSION = '1.0.0';
 	/**
 	 * Ecourier_Parcel_Tracker constructor.
 	 */
@@ -100,7 +107,7 @@ final class Ecourier_Parcel_Tracker {
 /**
  * Initializes the main plugin.
  *
- * @return \Ecourier_Parcel_Tracker
+ * @return \Ecourier_Parcel_Tracker|bool
  */
 function ecourier_parcel_tracker() {
 	return Ecourier_Parcel_Tracker::init();

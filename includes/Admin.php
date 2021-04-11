@@ -2,6 +2,8 @@
 
 namespace SimonGomes\EPT;
 
+use SimonGomes\EPT\Admin\Settings;
+
 /**
  * Class Admin.
  *
@@ -17,7 +19,19 @@ class Admin {
 	 * @return void
 	 */
 	public function __construct() {
+		$this->dispatch_actions();
+
 		new Admin\Menu();
+	}
+
+	/**
+	 * Dispatch necessary actions for the plugin.
+	 *
+	 * @return void
+	 */
+	public function dispatch_actions() {
+		$settings = new Settings();
+		add_action( 'admin_init', array( $settings, 'form_handler' ) );
 	}
 
 }

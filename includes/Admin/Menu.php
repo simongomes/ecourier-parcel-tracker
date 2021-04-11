@@ -31,16 +31,20 @@ class Menu {
 	 * @return void
 	 */
 	public function admin_menu() {
-		add_menu_page( __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), 'manage_options', 'ecourier-parcel-tracker', array( $this, 'plugin_page' ), 'dashicons-cart' );
+		$parant_slug = 'ecourier-parcel-tracker';
+		$capability  = 'manage_options';
+		add_menu_page( __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), $capability, $parant_slug, null, 'dashicons-cart' );
+		add_submenu_page( $parant_slug, __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), $capability, $parant_slug, array( $this, 'ecourier_settings_page' ) );
 	}
 
+
 	/**
-	 * Plugin page elements.
+	 * Handles ecourier admin configuration page.
 	 *
 	 * @return void
 	 */
-	public function plugin_page() {
-		echo 'Hello World';
+	public function ecourier_settings_page() {
+		new Settings();
 	}
 
 }
