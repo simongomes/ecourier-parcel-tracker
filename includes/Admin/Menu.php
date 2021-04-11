@@ -8,7 +8,11 @@
 namespace SimonGomes\EPT\Admin;
 
 /**
+ * Class Menu.
+ *
  * The Menu Class handles the admin menu bar.
+ *
+ * @package SimonGomes\EPT\Admin
  */
 class Menu {
 
@@ -28,6 +32,15 @@ class Menu {
 	 */
 	public function admin_menu() {
 		add_menu_page( __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), 'manage_options', 'ecourier-parcel-tracker', array( $this, 'plugin_page' ), 'dashicons-cart' );
+	}
+
+	/**
+	 * Plugin page elements.
+	 *
+	 * @return void
+	 */
+	public function plugin_page() {
+		echo 'Hello World';
 	}
 
 }

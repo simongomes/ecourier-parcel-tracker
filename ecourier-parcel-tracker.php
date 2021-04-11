@@ -73,6 +73,12 @@ final class Ecourier_Parcel_Tracker {
 	 */
 	public function init_plugin() {
 
+		if ( is_admin() ) {
+			new SimonGomes\EPT\Admin();
+		} else {
+			new SimonGomes\EPT\Frontend();
+		}
+
 	}
 
 	/**
