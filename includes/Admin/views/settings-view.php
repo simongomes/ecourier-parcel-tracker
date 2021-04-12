@@ -7,8 +7,7 @@
 ?>
 
 <div class="wrap">
-	<h1 class="wp-heading-inline"><?php esc_html_e( 'eCourier API Credentials', 'ecourier-parcel-tracker' ); ?></h1>
-
+	<h2 class="wp-heading-inline"><?php esc_html_e( 'eCourier API Credentials', 'ecourier-parcel-tracker' ); ?></h2>
 	<form action="" method="post">
 		<table class="form-table">
 			<tbody>

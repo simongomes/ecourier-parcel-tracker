@@ -10,20 +10,11 @@ namespace SimonGomes\EPT\Admin;
 class Settings {
 
 	/**
-	 * Settings constructor.
-	 *
-	 * @return void
-	 */
-	public function __construct() {
-		$this->settings_page();
-	}
-
-	/**
 	 * Handles the eCourier API configuration page.
 	 *
 	 * @return void
 	 */
-	public function settings_page() {
+	public function load_settings_page() {
 		if ( ! file_exists( __DIR__ . '/views/settings-view.php' ) ) {
 			return;
 		}

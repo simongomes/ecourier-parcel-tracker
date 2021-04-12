@@ -44,7 +44,8 @@ class Menu {
 	 * @return void
 	 */
 	public function ecourier_settings_page() {
-		new Settings();
+		$settings = new Settings();
+		$settings->load_settings_page();
 	}
 
 }

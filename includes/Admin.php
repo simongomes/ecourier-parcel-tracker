@@ -2,8 +2,6 @@
 
 namespace SimonGomes\EPT;
 
-use SimonGomes\EPT\Admin\Settings;
-
 /**
  * Class Admin.
  *
@@ -30,7 +28,7 @@ class Admin {
 	 * @return void
 	 */
 	public function dispatch_actions() {
-		$settings = new Settings();
+		$settings = new Admin\Settings();
 		add_action( 'admin_init', array( $settings, 'form_handler' ) );
 	}
 
