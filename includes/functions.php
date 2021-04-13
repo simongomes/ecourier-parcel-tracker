@@ -4,15 +4,18 @@
  * Handles the database insertion for api credentials.
  *
  * @param array $args array of api credentials.
+ *
+ * @return \WP_Error|bool
  */
 function ept_insert_settings( $args = array() ) {
 
 	if ( empty( $args['user_id'] ) || empty( $args['api_key'] ) || empty( $args['api_secret'] ) || empty( $args['api_environment'] ) ) {
 		return new \WP_Error( 'required-field-missing', __( 'All fields are required.', 'ecourier-parcel-tracker' ) );
 	}
+
 	global $wpdb;
-	$table_prefix = EPT_TABLE_PREFIX;
-	$table = "{$table_prefix}settings";
+
+	$table = EPT_TABLE_PREFIX . 'settings';
 
 	$defaults = array(
 		'user_id'         => '',
@@ -51,4 +54,54 @@ function ept_insert_settings( $args = array() ) {
 	}
 
 	return true;
+}
+
+/**
+ * Fetch ETP credentials from database.
+ *
+ * @return array
+ */
+function ept_get_settings() {
+	global $wpdb;
+
+	$table = EPT_TABLE_PREFIX . 'settings';
+
+	$result = $wpdb->get_results(
+		$wpdb->prepare(
+			"SELECT * FROM `$table`"
+		)
+	);
+	$settings_data['user_id'] = array_filter(
+		$result,
+		function ( $value ) {
+			return 'user_id' === $value->setting_key;
+		}
+	);
+	$settings_data['user_id'] = reset( $settings_data['user_id'] );
+
+	$settings_data['api_key'] = array_filter(
+		$result,
+		function ( $value ) {
+			return 'api_key' === $value->setting_key;
+		}
+	);
+	$settings_data['api_key'] = reset( $settings_data['api_key'] );
+
+	$settings_data['api_secret'] = array_filter(
+		$result,
+		function ( $value ) {
+			return 'api_secret' === $value->setting_key;
+		}
+	);
+	$settings_data['api_secret'] = reset( $settings_data['api_secret'] );
+
+	$settings_data['api_environment'] = array_filter(
+		$result,
+		function ( $value ) {
+			return 'api_environment' === $value->setting_key;
+		}
+	);
+	$settings_data['api_environment'] = reset( $settings_data['api_environment'] );
+
+	return $settings_data;
 }

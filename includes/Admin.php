@@ -2,6 +2,8 @@
 
 namespace SimonGomes\EPT;
 
+use SimonGomes\EPT\Admin\Settings;
+
 /**
  * Class Admin.
  *
@@ -27,9 +29,12 @@ class Admin {
 	/**
 	 * Dispatch necessary actions for the plugin.
 	 *
+	 * @param \SimonGomes\EPT\Admin\Settings $settings Settings class instance.
+	 *
 	 * @return void
 	 */
-	public function dispatch_actions( $settings ) {
+	public function dispatch_actions( Settings $settings ) {
+		add_action( 'admin_init', array( $settings, 'get_etp_settings' ) );
 		add_action( 'admin_init', array( $settings, 'form_handler' ) );
 	}
 

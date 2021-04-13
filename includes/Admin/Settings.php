@@ -10,11 +10,13 @@ namespace SimonGomes\EPT\Admin;
 class Settings {
 
 	/**
-	 * Settings for errors.
+	 * Settings form errors.
 	 *
 	 * @var array
 	 */
 	public $errors = array();
+
+	public $etp_settings = array();
 
 	/**
 	 * Handles the eCourier API configuration page.
@@ -78,6 +80,15 @@ class Settings {
 		wp_safe_redirect( $redirect_to );
 
 		exit;
+	}
+
+	/**
+	 * Get previous EPT settings from database
+	 *
+	 * @return void
+	 */
+	public function get_etp_settings() {
+		$this->etp_settings = ept_get_settings();
 	}
 
 }

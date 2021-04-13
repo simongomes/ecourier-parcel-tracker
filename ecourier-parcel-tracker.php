@@ -34,6 +34,14 @@ final class Ecourier_Parcel_Tracker {
 	 * @var string
 	 */
 	const VERSION = '1.0.0';
+
+	/*
+	 * EPT table prefix
+	 *
+	 * @var string
+	 */
+	const TABLE_PREFIX = 'ept_';
+
 	/**
 	 * Ecourier_Parcel_Tracker constructor.
 	 */
@@ -71,7 +79,7 @@ final class Ecourier_Parcel_Tracker {
 		define( 'EPT_PATH', __DIR__ );
 		define( 'EPT_URL', plugins_url( '', EPT_FILE ) );
 		define( 'EPT_ASSETS', EPT_URL . '/assets' );
-		define( 'EPT_TABLE_PREFIX', 'ept_' );
+		define( 'EPT_TABLE_PREFIX', self::TABLE_PREFIX );
 	}
 
 	/**
