@@ -61,7 +61,7 @@ final class Ecourier_Parcel_Tracker {
 	}
 
 	/**
-	 * Defines all necessary constants.
+	 * Defines all necessary constants for the plugin.
 	 *
 	 * @return void
 	 */
@@ -71,6 +71,7 @@ final class Ecourier_Parcel_Tracker {
 		define( 'EPT_PATH', __DIR__ );
 		define( 'EPT_URL', plugins_url( '', EPT_FILE ) );
 		define( 'EPT_ASSETS', EPT_URL . '/assets' );
+		define( 'EPT_TABLE_PREFIX', 'ept_' );
 	}
 
 	/**
@@ -94,12 +95,8 @@ final class Ecourier_Parcel_Tracker {
 	 * @return void
 	 */
 	public function activate() {
-		update_option( 'ept_version', EPT_VERSION );
-
-		$installed = get_option( 'ept_installed' );
-		if ( ! $installed ) {
-			update_option( 'ept_installed', time() );
-		}
+		$installer = new SimonGomes\EPT\Installer();
+		$installer->run();
 	}
 
 }

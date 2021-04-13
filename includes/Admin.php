@@ -17,9 +17,11 @@ class Admin {
 	 * @return void
 	 */
 	public function __construct() {
-		$this->dispatch_actions();
+		$settings = new Admin\Settings();
 
-		new Admin\Menu();
+		$this->dispatch_actions( $settings );
+
+		new Admin\Menu( $settings );
 	}
 
 	/**
@@ -27,8 +29,7 @@ class Admin {
 	 *
 	 * @return void
 	 */
-	public function dispatch_actions() {
-		$settings = new Admin\Settings();
+	public function dispatch_actions( $settings ) {
 		add_action( 'admin_init', array( $settings, 'form_handler' ) );
 	}
 

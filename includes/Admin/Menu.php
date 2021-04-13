@@ -17,11 +17,20 @@ namespace SimonGomes\EPT\Admin;
 class Menu {
 
 	/**
+	 * Holds the Settings() class instance.
+	 *
+	 * @var $settings
+	 */
+	public $settings;
+
+	/**
 	 * Menu constructor.
 	 *
-	 * @return void
+	 * @param \SimonGomes\EPT\Admin\Settings $settings Settings class instance.
 	 */
-	public function __construct() {
+	public function __construct( Settings $settings ) {
+		$this->settings = $settings;
+
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 	}
 
@@ -34,18 +43,7 @@ class Menu {
 		$parant_slug = 'ecourier-parcel-tracker';
 		$capability  = 'manage_options';
 		add_menu_page( __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), $capability, $parant_slug, null, 'dashicons-cart' );
-		add_submenu_page( $parant_slug, __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), $capability, $parant_slug, array( $this, 'ecourier_settings_page' ) );
-	}
-
-
-	/**
-	 * Handles ecourier admin configuration page.
-	 *
-	 * @return void
-	 */
-	public function ecourier_settings_page() {
-		$settings = new Settings();
-		$settings->load_settings_page();
+		add_submenu_page( $parant_slug, __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), $capability, $parant_slug, array( $this->settings, 'load_settings_page' ) );
 	}
 
 }
