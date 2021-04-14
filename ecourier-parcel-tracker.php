@@ -88,11 +88,15 @@ final class Ecourier_Parcel_Tracker {
 	 * @return void
 	 */
 	public function init_plugin() {
+
+		// Load assets for the plugin.
 		new SimonGomes\EPT\Assets();
 
 		if ( is_admin() ) {
+			// Load Admin classes.
 			new SimonGomes\EPT\Admin();
 		} else {
+			// Load Frontend classes.
 			new SimonGomes\EPT\Frontend();
 		}
 
