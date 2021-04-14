@@ -2,8 +2,9 @@
 /**
  * This file contains the markup and functionalities for eCourier API settings view.
  *
- * @package Ecourier_Parcel_Tracker
+ * @package SimonGomes\EPT
  */
+
 ?>
 
 <div class="wrap">

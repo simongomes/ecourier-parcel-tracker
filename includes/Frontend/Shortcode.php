@@ -32,21 +32,13 @@ class Shortcode {
 
 		wp_enqueue_style( 'ept-style' );
 		wp_enqueue_script( 'ept-script' );
-		?>
-		<div id="ept-wrap">
-			<h2 class="ept-title">Shipment Tracker</h2>
-			<h4 class="ept-subtitle">Track your parcel</h4>
-			<div class="ept-tracker-input-container">
-				<form method="post" id="trackForm" onsubmit="return false;">
-					<input type="text" name="tracking_item" placeholder="Type your tracking number" class="form-control">
-					<button type="submit" class="common-btn">
-						<i class="icon-search"></i>
-						<span>TRACK PARCEL</span>
-					</button>
-				</form>
-			</div>
-		</div>
-		<?php
+
+		ob_start();
+
+		include __DIR__ . '/views/form-parcel-tracker.php';
+
+		return ob_get_clean();
+
 	}
 
 }
