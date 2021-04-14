@@ -88,6 +88,7 @@ final class Ecourier_Parcel_Tracker {
 	 * @return void
 	 */
 	public function init_plugin() {
+		new SimonGomes\EPT\Assets();
 
 		if ( is_admin() ) {
 			new SimonGomes\EPT\Admin();

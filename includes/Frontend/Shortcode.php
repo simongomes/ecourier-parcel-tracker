@@ -29,7 +29,11 @@ class Shortcode {
 	 * @return string
 	 */
 	public function render_shortcode( $args, $content = '' ) {
-		return 'eCourier Parcel Tracker';
+
+		wp_enqueue_style( 'ept-style' );
+		wp_enqueue_script( 'ept-script' );
+
+		return '<div class="ept-container">eCourier Parcel Tracker</div>';
 	}
 
 }
