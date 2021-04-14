@@ -69,42 +69,15 @@ function ept_get_settings() : array {
 	$settings_data = array();
 
 	// phpcs:ignore
-	$result = $wpdb->get_results(
+	$settings = $wpdb->get_results(
 		$wpdb->prepare(
 			"SELECT `setting_key`, `value` FROM `$table`"
 		)
 	);
-	$settings_data['user_id'] = array_filter(
-		$result,
-		function ( $value ) {
-			return 'user_id' === $value->setting_key;
-		}
-	);
-	$settings_data['user_id'] = reset( $settings_data['user_id'] );
 
-	$settings_data['api_key'] = array_filter(
-		$result,
-		function ( $value ) {
-			return 'api_key' === $value->setting_key;
-		}
-	);
-	$settings_data['api_key'] = reset( $settings_data['api_key'] );
-
-	$settings_data['api_secret'] = array_filter(
-		$result,
-		function ( $value ) {
-			return 'api_secret' === $value->setting_key;
-		}
-	);
-	$settings_data['api_secret'] = reset( $settings_data['api_secret'] );
-
-	$settings_data['api_environment'] = array_filter(
-		$result,
-		function ( $value ) {
-			return 'api_environment' === $value->setting_key;
-		}
-	);
-	$settings_data['api_environment'] = reset( $settings_data['api_environment'] );
+	foreach ( $settings as $setting ) {
+		$settings_data[ $setting->setting_key ] = $setting->value;
+	}
 
 	return $settings_data;
 }

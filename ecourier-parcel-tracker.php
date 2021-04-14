@@ -92,6 +92,10 @@ final class Ecourier_Parcel_Tracker {
 		// Load assets for the plugin.
 		new SimonGomes\EPT\Assets();
 
+		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+			new SimonGomes\EPT\Ajax();
+		}
+
 		if ( is_admin() ) {
 			// Load Admin classes.
 			new SimonGomes\EPT\Admin();

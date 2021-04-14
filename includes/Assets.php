@@ -42,7 +42,7 @@ class Assets {
 		return array(
 			'ept-script' => array(
 				'src'       => EPT_ASSETS . '/js/frontend.js',
-				'deps'      => false,
+				'deps'      => array( 'jquery' ),
 				'version'   => filemtime( EPT_PATH . '/assets/js/frontend.js' ),
 				'in_footer' => true,
 			),
@@ -66,5 +66,14 @@ class Assets {
 		foreach ( $scripts as $handle => $script ) {
 			wp_register_script( $handle, $script['src'], $script['deps'], $script['version'], $script['in_footer'] );
 		}
+
+		wp_localize_script(
+			'ept-script',
+			'EPT',
+			array(
+				'ajaxurl' => admin_url( 'admin-ajax.php' ),
+				'error'   => __( 'Something went wrong!', 'ecourier-parcel-tracker' ),
+			)
+		);
 	}
 }

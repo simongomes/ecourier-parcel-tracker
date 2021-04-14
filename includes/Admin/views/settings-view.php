@@ -24,7 +24,7 @@
 						<label for="user_id">USER-ID:</label>
 					</th>
 					<td>
-						<input type="text" name="user_id" id="user_id" class="regular-text" value="<?php echo isset( $this->etp_settings['user_id'] ) ? esc_attr( $this->etp_settings['user_id']->value ) : ''; ?>">
+						<input type="text" name="user_id" id="user_id" class="regular-text" value="<?php echo isset( $this->etp_settings['user_id'] ) ? esc_attr( $this->etp_settings['user_id'] ) : ''; ?>">
 					</td>
 				</tr>
 				<tr>
@@ -32,7 +32,7 @@
 						<label for="api_key">API-KEY:</label>
 					</th>
 					<td>
-						<input type="text" name="api_key" id="api_key" class="regular-text" value="<?php echo isset( $this->etp_settings['api_key'] ) ? esc_attr( $this->etp_settings['api_key']->value ) : ''; ?>">
+						<input type="text" name="api_key" id="api_key" class="regular-text" value="<?php echo isset( $this->etp_settings['api_key'] ) ? esc_attr( $this->etp_settings['api_key'] ) : ''; ?>">
 					</td>
 				</tr>
 				<tr>
@@ -40,7 +40,7 @@
 						<label for="api_secret">API-SECRET:</label>
 					</th>
 					<td>
-						<input type="text" name="api_secret" id="api_secret" class="regular-text" value="<?php echo isset( $this->etp_settings['api_secret'] ) ? esc_attr( $this->etp_settings['api_secret']->value ) : ''; ?>">
+						<input type="text" name="api_secret" id="api_secret" class="regular-text" value="<?php echo isset( $this->etp_settings['api_secret'] ) ? esc_attr( $this->etp_settings['api_secret'] ) : ''; ?>">
 					</td>
 				</tr>
 				<tr>
@@ -48,11 +48,11 @@
 						<label for="api_environment">Environment:</label>
 					</th>
 					<td>
-						<?php $selected_environment = isset( $this->etp_settings['api_environment'] ) ? esc_attr( $this->etp_settings['api_environment']->value ) : ''; ?>
+						<?php $selected_environment = isset( $this->etp_settings['api_environment'] ) ? esc_attr( $this->etp_settings['api_environment'] ) : ''; ?>
 
 						<select name="api_environment" id="api_environment" class="regular-text">
-							<option value="staging" <?php echo 'staging' === $selected_environment ? 'selected' : false ?>>Staging</option>
-							<option value="live" <?php echo 'live' === $selected_environment ? 'selected' : false ?>>Live</option>
+							<option value="staging" <?php echo 'staging' === $selected_environment ? 'selected' : false; ?>>Staging</option>
+							<option value="live" <?php echo 'live' === $selected_environment ? 'selected' : false; ?>>Live</option>
 						</select>
 					</td>
 				</tr>
