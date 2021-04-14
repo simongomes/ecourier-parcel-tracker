@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 
 namespace SimonGomes\EPT\Admin;
 
@@ -12,10 +12,15 @@ class Settings {
 	/**
 	 * Settings form errors.
 	 *
-	 * @var array
+	 * @var array $errors
 	 */
 	public $errors = array();
 
+	/**
+	 * Holds the previous setting from database
+	 *
+	 * @var array $etp_settings
+	 */
 	public $etp_settings = array();
 
 	/**

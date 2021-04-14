@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 
 /**
  * Handles the database insertion for api credentials.
@@ -27,13 +27,14 @@ function ept_insert_settings( $args = array() ) {
 	$data     = wp_parse_args( $args, $defaults );
 	$inserted = false;
 
-	$delete = $wpdb->query( "TRUNCATE TABLE `$table`" );
+	$delete = $wpdb->query( "TRUNCATE TABLE `$table`" ); // phpcs:ignore
 
 	if ( ! $delete ) {
-		return new \WP_Error( 'failed-to-remove-old-dara', __( 'Failed to remove old settings data', 'ecourier-parcel-tracker' ) );
+		return new \WP_Error( 'failed-to-remove-old-data', __( 'Failed to remove old settings data', 'ecourier-parcel-tracker' ) );
 	}
 
 	foreach ( $data as $key => $input ) {
+		// phpcs:ignore
 		$inserted = $wpdb->replace(
 			$table,
 			array(
@@ -61,14 +62,16 @@ function ept_insert_settings( $args = array() ) {
  *
  * @return array
  */
-function ept_get_settings() {
+function ept_get_settings() : array {
 	global $wpdb;
 
-	$table = EPT_TABLE_PREFIX . 'settings';
+	$table         = EPT_TABLE_PREFIX . 'settings';
+	$settings_data = array();
 
+	// phpcs:ignore
 	$result = $wpdb->get_results(
 		$wpdb->prepare(
-			"SELECT * FROM `$table`"
+			"SELECT `setting_key`, `value` FROM `$table`"
 		)
 	);
 	$settings_data['user_id'] = array_filter(

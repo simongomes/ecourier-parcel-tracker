@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Menu class registers the admin navigation.
  *
