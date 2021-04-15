@@ -23,12 +23,9 @@ class Shortcode {
 	/**
 	 * Renders the front-end view using a shortcode.
 	 *
-	 * @param  array  $args arguments passed from front-end.
-	 * @param  string $content content passed from front-end.
-	 *
 	 * @return string
 	 */
-	public function render_shortcode( $args, $content = '' ) {
+	public function render_shortcode() {
 
 		wp_enqueue_style( 'ept-style' );
 		wp_enqueue_script( 'ept-script' );

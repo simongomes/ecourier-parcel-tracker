@@ -80,6 +80,8 @@ final class Ecourier_Parcel_Tracker {
 		define( 'EPT_URL', plugins_url( '', EPT_FILE ) );
 		define( 'EPT_ASSETS', EPT_URL . '/assets' );
 		define( 'EPT_TABLE_PREFIX', self::TABLE_PREFIX );
+		define( 'EPT_API_BASE_URL_STAGING', 'https://staging.ecourier.com.bd/api' );
+		define( 'EPT_API_BASE_URL_LIVE', 'https://backoffice.ecourier.com.bd/api' );
 	}
 
 	/**
@@ -88,10 +90,7 @@ final class Ecourier_Parcel_Tracker {
 	 * @return void
 	 */
 	public function init_plugin() {
-
-		// Load assets for the plugin.
-		new SimonGomes\EPT\Assets();
-
+		// Load frontend ajax request handler.
 		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 			new SimonGomes\EPT\Ajax();
 		}
@@ -100,6 +99,9 @@ final class Ecourier_Parcel_Tracker {
 			// Load Admin classes.
 			new SimonGomes\EPT\Admin();
 		} else {
+			// Load assets for the plugin.
+			new SimonGomes\EPT\Assets();
+
 			// Load Frontend classes.
 			new SimonGomes\EPT\Frontend();
 		}
