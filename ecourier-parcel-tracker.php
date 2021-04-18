@@ -1,17 +1,17 @@
 <?php // phpcs:ignore
 /**
- * Plugin Name  : eCourier Parcel Tracker
- * Plugin URI   : https://simongomes.dev
- * Description  : eCourier Parcel Tracker gives you an interface to track eCourier parcel from WordPress website.
- * Author       : Simon Gomes
- * Author URI   : https://simongomes.dev
- * Text Domain  : ecourier-parcel-tracker
- * Domain Path  : /languages
- * Version      : 1.0.0
- * License      : GPL2 or later
- * License URI  : https://www.gnu.org/licenses/gpl-2.0.html
+ * Plugin Name: eCourier Parcel Tracker
+ * Plugin URI: https://simongomes.dev
+ * Description: eCourier Parcel Tracker gives you an interface to track eCourier parcel from WordPress website.
+ * Author: Simon Gomes
+ * Author URI: https://simongomes.dev
+ * Text Domain: ecourier-parcel-tracker
+ * Domain Path: /languages
+ * Version: 1.0.0
+ * License: GPL2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  *
- * @package         Ecourier_Parcel_Tracker
+ * @package Ecourier_Parcel_Tracker
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
