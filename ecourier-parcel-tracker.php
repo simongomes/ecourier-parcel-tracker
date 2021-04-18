@@ -9,7 +9,7 @@
  * Domain Path  : /languages
  * Version      : 1.0.0
  * License      : GPL2 or later
- * License URI  : https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+ * License URI  : https://www.gnu.org/licenses/gpl-2.0.html
  *
  * @package         Ecourier_Parcel_Tracker
  */

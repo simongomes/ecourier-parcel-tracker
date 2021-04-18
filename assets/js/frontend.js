@@ -4,7 +4,7 @@
 //! author 		: Simon Gomes
 //! author uri	: https://simongomes.dev
 //! license 	: GPLv2 or later
-//! license uri : https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+//! license uri : https://www.gnu.org/licenses/gpl-2.0.html
 
 (function ($) {
 	let errorMessage = "";
