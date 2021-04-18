@@ -2,8 +2,9 @@
 //! frontend.js - for eCourier Parcel Tracker WordPress Plugin.
 //! version 	: 1.0.0
 //! author 		: Simon Gomes
-//! author_uri	: https://simongomes.dev
+//! author uri	: https://simongomes.dev
 //! license 	: GPLv2 or later
+//! license uri : https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 (function ($) {
 	let errorMessage = "";
