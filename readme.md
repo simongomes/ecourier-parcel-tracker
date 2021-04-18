@@ -13,7 +13,7 @@
 
 ## Description
 
-A simple WordPress plugin to give your customer an user friendly and simple interface inside your WordPress website to track their parcel status.
+A simple WordPress plugin to give your customer an user friendly and simple interface to track their parcel status from your WordPress website.
 
 ## Installation
 
