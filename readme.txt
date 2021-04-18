@@ -51,4 +51,3 @@ No, you will not. eCourier Parcel Tracker is not dependent on any other plugin.
 
 = 1.0.0 =
 * 1.0.0 is the latest release of eCourier Parcel Tracker plugin.
-
