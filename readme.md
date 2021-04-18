@@ -19,33 +19,33 @@ A simple WordPress plugin to give your customer an user friendly and simple inte
 
 Follow the following steps to install the plugin and get it working.
 
-1. Install the plugin from WordPress plugin library using the Plugins section from the WordPress dashboards, or download the zip file unzip and upload it inside `/wp-content/plugins/` directory of your WordPress installation.
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Once installed eCourier Tracker menu will be available. Go to the eCourier Tracker and provide your eCourier API Credentials.
-4. Select the Environment you would like to use (Staging or Live)
-5. Place the shortcode inside any page to make the interface available in your WordPress website.(e.g.: `[ecourier-parcel-tracker]`,`<?php echo do_shortcode('ecourier-parcel-tracker'); ?>` )
+1. Install the plugin from WordPress plugin library using the Plugins section from the WordPress dashboard, or download the zip file unzip and upload it inside `/wp-content/plugins/` directory of your WordPress installation.
+2. Activate the plugin through the 'Plugins' menu.
+3. Once installed _**eCourier Tracker**_ menu will be available. Go to the eCourier Tracker and provide your eCourier API Credentials.
+4. Select the Environment you would like to use (Staging or Live).
+5. Place the shortcode inside any page to make the interface available. (e.g.: `[ecourier-parcel-tracker]`,`<?php echo do_shortcode('ecourier-parcel-tracker'); ?>` )
 
 ## Frequently Asked Questions
 
-= Do I need eCourier account to use the plugin =
+**Do I need eCourier account to use the plugin?**
 
 Yes you will need an eCourier account and API credentials to user this plugin.
 
-= Do I need any configuration from eCourier? =
+**Do I need any configuration from eCourier?**
 
 Yes, you will need API credentials for you eCourier account. You can get it from eCourier.
 
-= What credentials do I need to setup the plugin? =
+**What credentials do I need to setup the plugin?**
 
 You will need your API credentials which includes `USER-ID`, `API-KEY` and `API-SECRET`.
 
-= How do I get the API credentials? =
+**How do I get the API credentials?**
 
 You can contact eCourier for the API credentials for your account.
 
-= Do I need WooCommerce for this plugin? =
+**Do I need WooCommerce for this plugin?**
 
-No, you will not. eCourier Parcel Tracker is not dependent on any other plugin.
+No, you will not. **eCourier Parcel** Tracker is not dependent on any other plugin.
 
 ## Changelog
 
