@@ -27,6 +27,7 @@ class Shortcode {
 	 */
 	public function render_shortcode() {
 
+		// enqueue all frontend assets.
 		wp_enqueue_style( 'ept-style' );
 		wp_enqueue_script( 'ept-script' );
 

@@ -40,9 +40,21 @@ class Assets {
 	 */
 	public function get_scripts() {
 		return array(
+			'ept-lodash' => array(
+				'src'       => EPT_ASSETS . '/js/lodash.js',
+				'deps'      => array(),
+				'version'   => EPT_VERSION,
+				'in_footer' => true,
+			),
+			'ept-moment' => array(
+				'src'       => EPT_ASSETS . '/js/moment.js',
+				'deps'      => array(),
+				'version'   => EPT_VERSION,
+				'in_footer' => true,
+			),
 			'ept-script' => array(
 				'src'       => EPT_ASSETS . '/js/frontend.js',
-				'deps'      => array( 'jquery' ),
+				'deps'      => array( 'jquery', 'ept-lodash', 'ept-moment' ),
 				'version'   => filemtime( EPT_PATH . '/assets/js/frontend.js' ),
 				'in_footer' => true,
 			),

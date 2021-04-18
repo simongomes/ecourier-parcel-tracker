@@ -31,7 +31,7 @@ class Ajax {
 		if ( isset( $_POST['ept-search-form'] ) && ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['ept-search-form'] ) ), 'ept_tracking_form' ) ) {
 			wp_send_json_error(
 				array(
-					'message' => 'You are not allowed to do this',
+					'message' => __( 'You are not allowed to do this', 'ecourier-tracking-code' ),
 				)
 			);
 			exit;
@@ -41,26 +41,34 @@ class Ajax {
 
 		if ( isset( $_POST['tracking_code'] ) ) {
 			$tracking_code = sanitize_text_field( wp_unslash( $_POST['tracking_code'] ) );
+
+			$ecourier_api_url = 'live' === $settings['api_environment'] ? EPT_API_BASE_URL_LIVE . '/track' : EPT_API_BASE_URL_STAGING . '/track';
+
+			$response = wp_remote_post(
+				$ecourier_api_url,
+				array(
+					'method'  => 'POST',
+					'headers' => array(
+						'USER-ID'    => $settings['user_id'],
+						'API-KEY'    => $settings['api_key'],
+						'API-SECRET' => $settings['api_secret'],
+					),
+					'body'    => array(
+						'ecr' => $tracking_code,
+					),
+				)
+			);
+
+			wp_send_json_success(
+				array(
+					'message' => $response['body'],
+				)
+			);
 		}
 
-		$response = wp_remote_post(
-			EPT_API_BASE_URL_LIVE . '/track',
+		wp_send_json_error(
 			array(
-				'method'  => 'POST',
-				'headers' => array(
-					'USER-ID'    => $settings['user_id'],
-					'API-KEY'    => $settings['api_key'],
-					'API-SECRET' => $settings['api_secret'],
-				),
-				'body'    => array(
-					'ecr' => $tracking_code,
-				),
-			)
-		);
-
-		wp_send_json_success(
-			array(
-				'message' => $response['body'],
+				'message' => __( 'Please provide a valid tracking code.', 'ecourier-parcel-tracker' ),
 			)
 		);
 	}

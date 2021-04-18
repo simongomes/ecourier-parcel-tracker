@@ -126,3 +126,275 @@
 	max-width: 200px;
 	margin-bottom: 30px;
 }
+
+#ept-wrap #package-information {
+	display: none;
+	padding: 30px;
+	background: #fff;
+	border-radius: 6px;
+	margin-top: 50px;
+	-webkit-box-shadow: 0 0 15px -8px rgb(27 30 26 / 45%);
+	-ms-box-shadow: 0 0 15px -8px rgba(27, 30, 26, .45);
+	box-shadow: 0 0 15px -8px rgb(27 30 26 / 45%);
+}
+
+#ept-wrap #package-information .info-header {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 -30px 30px;
+	border-bottom: 1px solid #e3e7e9;
+	padding: 0 30px 30px;
+	align-items: center;
+}
+
+#ept-wrap #package-information .info-header h3 {
+	font-size: 30px;
+	font-weight: 700;
+	margin: 0;
+}
+
+#ept-wrap #package-information .info-header h4 {
+	color: #3a3a3a;
+	text-align: right;
+	font-weight: 400;
+	font-size: 16px;
+	margin: 0;
+}
+
+#ept-wrap #package-information .info-header h4 strong {
+	display: block;
+	font-size: 18px;
+	color: #1B1E1A;
+	font-weight: 700;
+	margin-top: 5px;
+}
+
+#ept-wrap #package-information .track-order-info {
+	padding: 30px;
+	background: #F1F3F4;
+	border-radius: 4px;
+	margin-bottom: 30px;
+}
+
+#ept-wrap #package-information .track-order-info p {
+	margin: 0;
+	display: inline;
+}
+
+#ept-wrap #package-information .track-order-info ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+#ept-wrap #package-information .track-order-info ul li {
+	font-size: 14px;
+	letter-spacing: .25px;
+	color: #1B1E1A;
+}
+
+#ept-wrap #package-information .track-order-info ul li:first-of-type {
+	text-align: left;
+}
+
+#ept-wrap #package-information .track-order-info ul li:nth-child(2) {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+#ept-wrap #package-information .track-order-info ul li:last-of-type {
+	text-align: right;
+}
+
+#ept-wrap #package-information .track-order-info ul li span {
+	display: block;
+	font-size: 14px;
+	color: #465C5F;
+	margin-bottom: 5px;
+	font-weight: 400;
+}
+
+#ept-wrap #package-information .track-delivery-info {
+	padding: 30px 30px 0;
+	background: #F1F3F4;
+	border-radius: 4px;
+}
+
+#ept-wrap #package-information .track-delivery-info ul {
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+#ept-wrap #package-information .track-delivery-info ul::before {
+	content: '';
+	width: 2px;
+	height: calc(100% - 90px);
+	position: absolute;
+	left: 0;
+	top: 2px;
+	background: #602D90;
+}
+
+#ept-wrap #package-information .track-delivery-info ul::after {
+	content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC42OTMiIGhlaWdodD0iMTcuNzM4IiB2aWV3Qm94PSIwIDAgMTQuNjkzIDE3LjczOCI+CiAgPGcgaWQ9InNlbmQtcmVjZWl2ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMuMjc3IC0xLjEyNSkiPgogICAgPHBhdGggaWQ9IlBhdGhfMyIgZGF0YS1uYW1lPSJQYXRoIDMiIGQ9Ik0xMi40MTksMi44NTF2OGwyLjA1Mi0xLjg5NSwxLjU3OS0uMzE2TDE3LjI2Miw5Ljc2bC0uNDc0LDEuODI4LTYsNi40MjJMNC4zMTMsMTEuMTE1VjkuMzI2bDIuMTA1LS43OUw5LjA1LDEwLjg1MmwuMTU3LThBMi4wNTgsMi4wNTgsMCwwLDEsMTIuNDE5LDIuODUxWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTAuMTYzIC0wLjE0NykiIGZpbGw9IiNmMWYzZjQiLz4KICAgIDxnIGlkPSJHcm91cF8zIiBkYXRhLW5hbWU9Ikdyb3VwIDMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMuMjc3IDEuMTI1KSI+CiAgICAgIDxwYXRoIGlkPSJQYXRoXzQiIGRhdGEtbmFtZT0iUGF0aCA0IiBkPSJNMTAuNjIzLDE4Ljg2M2wtNi41NC02LjU0YTIuNzU4LDIuNzU4LDAsMCwxLDAtMy45LDIuODIxLDIuODIxLDAsMCwxLDMuNzg1LS4xMDVWMy44ODFhMi43NTYsMi43NTYsMCwxLDEsNS41MTEsMHY0LjQ0YTIuODIxLDIuODIxLDAsMCwxLDMuNzg1LjEwNSwyLjc1OCwyLjc1OCwwLDAsMSwwLDMuOVpNNi4wMzEsOS40NTZhLjkxOC45MTgsMCwwLDAtLjY0OSwxLjU2OGw1LjI0Miw1LjI0Miw1LjI0Mi01LjI0MmEuOTE3LjkxNywwLDAsMCwwLTEuMy45MzkuOTM5LDAsMCwwLTEuMywwTDExLjU0MiwxMi43NVYzLjg4MWEuOTE5LjkxOSwwLDAsMC0xLjgzOCwwVjEyLjc1TDYuNjgsOS43MjVBLjkxMS45MTEsMCwwLDAsNi4wMzEsOS40NTZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMy4yNzcgLTEuMTI1KSIgZmlsbD0iIzYwMmQ5MCIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==);
+	position: absolute;
+	top: 20px;
+	left: -6px;
+	width: 18px;
+	animation: scroll 3s infinite forwards;
+}
+
+#ept-wrap #package-information .track-delivery-info ul li {
+	position: relative;
+	padding-left: 30px;
+	min-height: 90px;
+	color: #3a3a3a;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+#ept-wrap #package-information .track-delivery-info ul li::before {
+	content: '';
+	width: 14px;
+	height: 14px;
+	background: #602D90;
+	border-radius: 50%;
+	position: absolute;
+	left: -6px;
+	top: 2px;
+	border: 2px solid #fff;
+	-webkit-box-shadow: 0 0 5px -1px rgb(27 30 26 / 25%);
+	-ms-box-shadow: 0 0 5px -1px rgba(27,30,26,.25);
+	box-shadow: 0 0 5px -1px rgb(27 30 26 / 25%);
+}
+
+#ept-wrap #package-information .track-delivery-info ul li span {
+	color: #1B1E1A;
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+
+@keyframes scroll {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0)
+	}
+
+	75% {
+		opacity: 1
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(50px)
+	}
+}
+
+#ept-wrap #package-information .track-shipment-info {
+	padding: 30px;
+	background: #F1F3F4;
+	border-radius: 4px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#ept-wrap #package-information .track-shipment-info h3 {
+   font-size: 18px;
+	color: #1B1E1A;
+	margin-bottom: 30px;
+	margin-top: 0;
+	font-weight: 600;
+}
+
+#ept-wrap #package-information .track-shipment-info ul {
+	padding: 0;
+	margin: 0;
+}
+#ept-wrap #package-information .track-shipment-info ul li {
+	position: relative;
+	letter-spacing: .35px;
+}
+
+#ept-wrap #package-information .track-shipment-info>ul>li {
+	font-size: 16px;
+	font-weight: 700;
+	padding-left: 30px;
+	border-left: 2px solid #959595;
+	border-color: #959595;
+}
+
+#ept-wrap #package-information .track-shipment-info>ul>li::before {
+	top: 0;
+}
+
+#ept-wrap #package-information .track-shipment-info>ul>li::before, #ept-wrap #package-information .track-shipment-info>ul>li:last-child::after {
+	content: '';
+	height: 18px;
+	width: 18px;
+	background: #959595;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: -10px;
+}
+#ept-wrap #package-information .track-shipment-info>ul>li.active {
+	border-color: #602D90;
+}
+
+#ept-wrap #package-information .track-shipment-info>ul>li.active::before, #ept-wrap #package-information .track-shipment-info>ul>li.active:last-child::after {
+	background: #602D90;
+}
+#ept-wrap #package-information .track-shipment-info ul li ul {
+	width: 80%;
+}
+
+#ept-wrap #package-information .track-shipment-info ul li ul li {
+	display: grid;
+	grid-template-columns: 120px 1fr;
+	padding: 15px 0;
+	font-size: 12px;
+	color: #3a3a3a;
+	font-weight: 400;
+}
+
+#ept-wrap #package-information .track-shipment-info ul li ul li::before {
+	top: 20px;
+	left: -30px;
+	position: absolute;
+	width: 12px;
+	height: 2px;
+	background: #959595;
+	content: '';
+}
+
+#ept-wrap #package-information .track-shipment-info ul li ul li h4 {
+	margin: 0;
+	font-size: 12px;
+}
+
+#ept-wrap #package-information .track-shipment-info ul li ul li strong, #ept-wrap #package-information .track-shipment-info ul li ul li h4 {
+	color: #1B1E1A;
+	font-weight: 500;
+}
+
+#ept-wrap #package-information .track-shipment-info ul li ul li b {
+	display: block;
+	color: #1B1E1A;
+	font-size: 13px;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+#ept-wrap #package-information .track-shipment-info ul li ul li strong, #ept-wrap #package-information .track-shipment-info ul li ul li h4 {
+	color: #1B1E1A;
+	font-weight: 500;
+}
+#ept-wrap #package-information .track-shipment-info>ul>li.active ul li::before {
+	background: #602D90;
+}
+
+
