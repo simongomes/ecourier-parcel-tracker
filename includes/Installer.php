@@ -48,9 +48,9 @@ class Installer {
 		global $wpdb;
 
 		$charset_collate = $wpdb->get_charset_collate();
-		$table_prefix    = EPT_TABLE_PREFIX;
+		$table           = EPT_TABLE_PREFIX . 'settings';
 
-		$schema = "CREATE TABLE IF NOT EXISTS `{$table_prefix}settings` (
+		$schema = "CREATE TABLE IF NOT EXISTS `{$table}` (
 		  `id` int(11) NOT NULL,
 		  `setting_key` varchar(191) COLLATE utf8mb4_unicode_520_ci NOT NULL,
 		  `value` varchar(191) COLLATE utf8mb4_unicode_520_ci NOT NULL,

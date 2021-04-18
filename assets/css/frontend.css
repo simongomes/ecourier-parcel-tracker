@@ -12,6 +12,10 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+#ept-wrap * {
+	list-style: none!important;
+}
+
 #ept-wrap .ept-title {
 	font-weight: 600;
 	text-align: center;
@@ -254,6 +258,7 @@
 	color: #3a3a3a;
 	font-weight: 400;
 	line-height: 20px;
+	font-size: 14px;
 }
 
 #ept-wrap #package-information .track-delivery-info ul li::before {
@@ -396,5 +401,3 @@
 #ept-wrap #package-information .track-shipment-info>ul>li.active ul li::before {
 	background: #602D90;
 }
-
-

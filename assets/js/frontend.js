@@ -1,4 +1,10 @@
-// phpcs:ignoreFile
+//! phpcs:ignoreFile
+//! frontend.js - for eCourier Parcel Tracker WordPress Plugin.
+//! version 	: 1.0.0
+//! author 		: Simon Gomes
+//! author_uri	: https://simongomes.dev
+//! license 	: GPLv2 or later
+
 (function ($) {
 	let errorMessage = "";
 	let errorContainer = $("#error-container");

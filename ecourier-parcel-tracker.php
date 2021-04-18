@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Plugin Name:     eCourier Parcel Tracker
  * Plugin URI:      https://simongomes.dev
@@ -48,6 +48,7 @@ final class Ecourier_Parcel_Tracker {
 	private function __construct() {
 		$this->define_constants();
 
+		// Plugin registration hook.
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
 
 		add_action( 'plugins_loaded', array( $this, 'init_plugin' ) );

@@ -71,7 +71,7 @@ function ept_get_settings() : array {
 	// phpcs:ignore
 	$settings = $wpdb->get_results(
 		$wpdb->prepare(
-			"SELECT `setting_key`, `value` FROM `$table`"
+			"SELECT `setting_key`, `value` FROM `$table`" // phpcs:ignore
 		)
 	);
 
