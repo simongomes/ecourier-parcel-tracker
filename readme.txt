@@ -36,7 +36,7 @@ Follow the following steps to install the plugin and get it working.
 
 = Do I need eCourier account to use the plugin? =
 
-Yes you will need an eCourier account and API credentials to user this plugin.
+Yes you will need an eCourier account and API credentials to use this plugin.
 
 = Do I need any configuration from eCourier? =
 
