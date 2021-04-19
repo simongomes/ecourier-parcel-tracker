@@ -45,7 +45,7 @@ You can contact eCourier for the API credentials for your account.
 
 **Do I need WooCommerce for this plugin?**
 
-No, you will not. **eCourier Parcel** Tracker is not dependent on any other plugin.
+No, you will not. **eCourier Parcel Tracker** is not dependent on any other plugin.
 
 ## Changelog
 
