@@ -1,4 +1,4 @@
-=== eCourier Parcel Tracker ===
+=== Parcel Tracker eCourier ===
 Contributors: simongomes02
 Donate link: https://simongomes.dev/
 Tags: ecourier, parcel, parcel-tracker, ecourier-parcel, ecourier-parcel-tracker, package-tracker, ecourier-package-tracker, bangladesh, bangladesh-parcel, bangladesh-parcel-tracker, woocommerce, wc, woocommerce-parcel-tracker
@@ -9,7 +9,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-eCourier Parcel Tracker gives you a simple interface for eCourier parcel tracking
+Parcel Tracker eCourier gives you a simple interface for eCourier parcel tracking
 
 == Description ==
 
@@ -52,9 +52,9 @@ You can contact eCourier for the API credentials for your account.
 
 = Do I need WooCommerce for this plugin? =
 
-No, you will not. eCourier Parcel Tracker is not dependent on any other plugin.
+No, you will not. Parcel Tracker eCourier is not dependent on any other plugin.
 
 == Changelog ==
 
 = 1.0.0 =
-* 1.0.0 is the latest release of eCourier Parcel Tracker plugin.
+* 1.0.0 is the latest release of Parcel Tracker eCourier plugin.

@@ -1,8 +1,8 @@
 <?php // phpcs:ignore
 /**
- * Plugin Name: eCourier Parcel Tracker
+ * Plugin Name: Parcel Tracker eCourier
  * Plugin URI: https://github.com/simongomes/ecourier-parcel-tracker
- * Description: eCourier Parcel Tracker gives you an interface to track eCourier parcel from WordPress website.
+ * Description: Parcel Tracker eCourier gives you an interface to track eCourier parcel from WordPress website.
  * Author: Simon Gomes
  * Author URI: https://simongomes.dev
  * Text Domain: ecourier-parcel-tracker
