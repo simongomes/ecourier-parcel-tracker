@@ -61,4 +61,16 @@
 		<?php wp_nonce_field( 'ecourier-settings' ); ?>
 		<?php submit_button( __( 'Save Settings', 'ecourier-parcel-tracker' ), 'primary', 'submit_ecourier_settings', true, null ); ?>
 	</form>
+
+	<h1 class="wp-heading-inline"><?php esc_html_e( 'Shortcode', 'ecourier-parcel-tracker' ); ?></h1>
+
+	<div class="card">
+		<h2 class="title"><?php esc_html_e( 'Copy shortcode and place it to any of your pages.', 'ecourier-parcel-tracker' ); ?></h2>
+		<h4><?php esc_html_e( 'From Dashboard:', 'ecourier-parcel-tracker' ); ?></h4>
+		<code><?php esc_html_e( '[ecourier-parcel-tracker]', 'ecourier-parcel-tracker' ); ?></code>
+
+		<h4><?php esc_html_e( 'From PHP file:', 'ecourier-parcel-tracker' ); ?></h4>
+		<code><?php echo esc_html( "<?php echo do_shortcode( 'ecourier-parcel-tracker' ); ?>" ); ?></code>
+		<br><br>
+	</div>
 </div>
