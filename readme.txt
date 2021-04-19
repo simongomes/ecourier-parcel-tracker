@@ -1,7 +1,7 @@
 === Parcel Tracker eCourier ===
 Contributors: simongomes02
 Donate link: https://simongomes.dev/
-Tags: ecourier, parcel, parcel-tracker, ecourier-parcel, ecourier-parcel-tracker, package-tracker, ecourier-package-tracker, bangladesh, bangladesh-parcel, bangladesh-parcel-tracker, woocommerce, wc, woocommerce-parcel-tracker
+Tags: parcel-tracker, parcel, ecourier-parcel, ecourier-parcel-tracker, package-tracker, ecourier-package-tracker, bangladesh, bangladesh-parcel, bangladesh-parcel-tracker, woocommerce, wc, woocommerce-parcel-tracker
 Requires at least: 4.0
 Tested up to: 5.7
 Requires PHP: 5.6
