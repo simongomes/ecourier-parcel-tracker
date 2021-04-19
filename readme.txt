@@ -40,7 +40,7 @@ Yes you will need an eCourier account and API credentials to use this plugin.
 
 = Do I need any configuration from eCourier? =
 
-Yes, you will need API credentials for you eCourier account. You can get it from eCourier.
+Yes, you will need API credentials for your eCourier account. You can get it from eCourier.
 
 = What credentials do I need to setup the plugin? =
 
