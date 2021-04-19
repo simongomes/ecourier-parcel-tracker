@@ -25,6 +25,13 @@ Follow the following steps to install the plugin and get it working.
 4. Select the Environment you would like to use (Staging or Live)
 5. Place the shortcode inside any page to make the interface available. (e.g.: `[ecourier-parcel-tracker]`,`<?php echo do_shortcode('ecourier-parcel-tracker'); ?>` )
 
+== Screenshot ==
+
+1. eCourier API settings screen.
+2. eCourier parcel tracking form.
+3. eCourier parcel package information.
+4. eCourier parcel shipment statuses.
+
 == Frequently Asked Questions ==
 
 = Do I need eCourier account to use the plugin? =
