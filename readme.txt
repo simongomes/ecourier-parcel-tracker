@@ -60,6 +60,7 @@ No, you will not. Parcel Tracker eCourier is not dependent on any other plugin.
 * 1.0.0 is the latest release of Parcel Tracker eCourier plugin.
 
 = Privacy Policy =
+
 Parcel Tracker eCourier uses [Appsero](https://appsero.com) SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
 
 Appsero SDK **does not gather any data by default.** The SDK only starts gathering basic telemetry data **when a user allows it via the admin notice**. We collect the data to ensure a great user experience for all our users.
