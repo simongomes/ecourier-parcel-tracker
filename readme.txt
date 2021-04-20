@@ -59,7 +59,7 @@ No, you will not. Parcel Tracker eCourier is not dependent on any other plugin.
 = 1.0.0 =
 * 1.0.0 is the latest release of Parcel Tracker eCourier plugin.
 
-= Privacy Policy =
+== Privacy Policy ==
 
 Parcel Tracker eCourier uses [Appsero](https://appsero.com) SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
 
