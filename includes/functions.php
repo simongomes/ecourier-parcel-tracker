@@ -67,13 +67,8 @@ function ept_get_settings() : array {
 
 	$table         = EPT_TABLE_PREFIX . 'settings';
 	$settings_data = array();
-
-	// phpcs:ignore
-	$settings = $wpdb->get_results(
-		$wpdb->prepare(
-			"SELECT `setting_key`, `value` FROM `$table`" // phpcs:ignore
-		)
-	);
+	
+	$settings = $wpdb->get_results( "SELECT `setting_key`, `value` FROM `$table`"); // phpcs:ignore
 
 	foreach ( $settings as $setting ) {
 		$settings_data[ $setting->setting_key ] = $setting->value;
