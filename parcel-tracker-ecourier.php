@@ -40,6 +40,12 @@
  * **********************************************************************
  */
 
+use SimonGomes\EPT\Admin;
+use SimonGomes\EPT\Ajax;
+use SimonGomes\EPT\Appsero_Tracker;
+use SimonGomes\EPT\Assets;
+use SimonGomes\EPT\Frontend;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
@@ -118,20 +124,23 @@ final class Ecourier_Parcel_Tracker {
 	 * @return void
 	 */
 	public function init_plugin() {
+		// Initialize the Appsero tracker for plugin analytics.
+		Appsero_Tracker::init_tracker();
+
 		// Load frontend ajax request handler.
 		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
-			new SimonGomes\EPT\Ajax();
+			new Ajax();
 		}
 
 		if ( is_admin() ) {
 			// Load Admin classes.
-			new SimonGomes\EPT\Admin();
+			new Admin();
 		} else {
 			// Load assets for the plugin.
-			new SimonGomes\EPT\Assets();
+			new Assets();
 
 			// Load Frontend classes.
-			new SimonGomes\EPT\Frontend();
+			new Frontend();
 		}
 
 	}

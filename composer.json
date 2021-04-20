@@ -10,7 +10,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "appsero/client": "dev-develop"
+    },
     "autoload": {
       "psr-4": {
         "SimonGomes\\EPT\\": "includes/"
