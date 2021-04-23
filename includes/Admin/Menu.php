@@ -42,7 +42,7 @@ class Menu {
 	public function admin_menu() {
 		$parant_slug = 'ecourier-parcel-tracker';
 		$capability  = 'manage_options';
-		add_menu_page( __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), $capability, $parant_slug, null, 'dashicons-cart' );
+		add_menu_page( __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), $capability, $parant_slug, null, EPT_ASSETS . '/images/menu_icon.png' );
 		add_submenu_page( $parant_slug, __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), __( 'eCourier Tracker', 'ecourier-parcel-tracker' ), $capability, $parant_slug, array( $this->settings, 'load_settings_page' ) );
 	}
 

@@ -119,7 +119,7 @@ final class Ecourier_Parcel_Tracker {
 	}
 
 	/**
-	 * Initialize plugin assets
+	 * Initialize plugin assets.
 	 *
 	 * @return void
 	 */
