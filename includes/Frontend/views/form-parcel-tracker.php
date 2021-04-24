@@ -14,8 +14,7 @@
 		<form method="post" id="track-form" action="#">
 			<input type="text" name="tracking_code" placeholder="<?php esc_attr_e( 'Type your tracking number', 'ecourier-parcel-tracker' ); ?>" class="tracking-code form-control">
 
-			<?php wp_nonce_field( 'ept-search-form' ); ?>
-			<input type="hidden" name="action" value="ept_tracking_form">
+<!--			<input type="hidden" name="action" value="ept_tracking_form">-->
 
 			<button type="submit" class="common-btn">
 				<i class="icon-search"></i>

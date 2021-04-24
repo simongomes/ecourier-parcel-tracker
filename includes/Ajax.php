@@ -28,14 +28,8 @@ class Ajax {
 	 */
 	public function handle_form_submission() {
 
-		if ( isset( $_POST['ept-search-form'] ) && ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['ept-search-form'] ) ), 'ept_tracking_form' ) ) {
-			wp_send_json_error(
-				array(
-					'message' => __( 'You are not allowed to do this', 'ecourier-tracking-code' ),
-				)
-			);
-			exit;
-		}
+		// Block if valid nonce field is not available and valid.
+		check_ajax_referer( 'ept-parcel-tracker-nonce', 'nonce' );
 
 		$settings = ept_get_settings();
 

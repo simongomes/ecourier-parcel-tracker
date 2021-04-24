@@ -5,7 +5,7 @@ Tags: parcel-tracker, parcel, ecourier-parcel, ecourier-parcel-tracker, package-
 Requires at least: 4.0
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,9 @@ No, you will not. Parcel Tracker eCourier is not dependent on any other plugin.
 
 = 1.0.0 =
 * 1.0.0 is the latest release of Parcel Tracker eCourier plugin.
+
+= 1.0.1 =
+* Security measures added for Ajax form submission, this will block unauthorized form submissions for Parcel Tracking Form.
 
 == Privacy Policy ==
 

@@ -83,8 +83,9 @@ class Assets {
 			'ept-script',
 			'EPT',
 			array(
-				'ajaxurl' => admin_url( 'admin-ajax.php' ),
-				'error'   => __( 'Something went wrong!', 'ecourier-parcel-tracker' ),
+				'ajaxurl'    => admin_url( 'admin-ajax.php' ),
+				'_etp_nonce' => wp_create_nonce( 'ept-parcel-tracker-nonce' ),
+				'error'      => __( 'Something went wrong!', 'ecourier-parcel-tracker' ),
 			)
 		);
 	}

@@ -54,6 +54,7 @@
 
 #ept-wrap .ept-tracker-input-container form {
 	position: relative;
+	margin: 0;
 }
 
 #ept-wrap .ept-tracker-input-container form input {
@@ -134,7 +135,7 @@
 
 #ept-wrap #track-not-found img {
 	max-width: 200px;
-	margin-bottom: 30px;
+	margin: 0 auto 30px;
 }
 
 #ept-wrap #package-information {
@@ -314,7 +315,7 @@
 }
 
 #ept-wrap #package-information .track-shipment-info h3 {
-   font-size: 18px;
+	font-size: 18px;
 	color: #1B1E1A;
 	margin-bottom: 30px;
 	margin-top: 0;

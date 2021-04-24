@@ -44,6 +44,7 @@
 		}
 
 		let data = $(this).serialize();
+        data += `&nonce=${EPT._etp_nonce}&action=ept_tracking_form`;
 		$.post(EPT.ajaxurl, data, function (response) {
 			if (response.success) {
 				const result = JSON.parse(response.data.message);
