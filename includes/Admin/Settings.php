@@ -45,7 +45,7 @@ class Settings {
 			return;
 		}
 
-		if ( isset( $_REQUEST['_wpnonce'] ) && ! wp_verify_nonce( sanitize_key( $_REQUEST['_wpnonce'] ), 'ecourier-settings' ) ) {
+		if ( ! isset( $_REQUEST['_wpnonce'] ) || ! wp_verify_nonce( sanitize_key( $_REQUEST['_wpnonce'] ), 'ecourier-settings' ) ) {
 			wp_die( 'Nope! I can\'t let you do this' );
 		}
 
