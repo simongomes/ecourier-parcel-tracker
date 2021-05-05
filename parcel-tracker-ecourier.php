@@ -7,7 +7,7 @@
  * Author URI: https://simongomes.dev
  * Text Domain: ecourier-parcel-tracker
  * Domain Path: /languages
- * Version: 1.0.1
+ * Version: 1.0.2
  * License: GPL2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  *
@@ -66,7 +66,7 @@ final class Ecourier_Parcel_Tracker {
 	 *
 	 * @var string
 	 */
-	const VERSION = '1.0.1';
+	const VERSION = '1.0.2';
 
 	/*
 	 * EPT table prefix

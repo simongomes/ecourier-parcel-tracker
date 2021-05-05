@@ -5,13 +5,13 @@
 **Requires at least:** 4.0  
 **Tested up to:** 5.7  
 **Requires PHP:** 5.6  
-**Stable tag:** 1.0.1  
+**Stable tag:** 1.0.2  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/licenses.html  
 
 **Parcel Tracker eCourier** gives you a simple interface for eCourier parcel tracking
 
-[![Release](https://img.shields.io/badge/release-v1.0.0-blue.svg?style=flat-square)](https://github.com/simongomes/ecourier-parcel-tracker/releases/)
+[![Release](https://img.shields.io/badge/release-v1.0.2-blue.svg?style=flat-square)](https://github.com/simongomes/ecourier-parcel-tracker/releases/)
 [![GitHub license](https://img.shields.io/badge/license-GPLv2-green.svg?style=flat-square)](https://www.gnu.org/licenses/licenses.html/)
 [![Open Source](https://img.shields.io/badge/open%20source-yes-orange.svg?style=flat-square)](https://github.com/simongomes/ecourier-parcel-tracker)
 [![Made With](https://img.shields.io/badge/made%20with-php-darkgreen.svg?style=flat-square)](https://www.php.net/)
@@ -62,6 +62,9 @@ No, you will not. **Parcel Tracker eCourier** is not dependent on any other plug
 
 *1.0.1*
 > Security measures added for Ajax form submission, this will block unauthorized form submissions for Parcel Tracking Form.
+
+*1.0.2*
+> CSRF validation added for settings form, to protect against unnecessary security breach.
 
 
 ## Privacy Policy  
