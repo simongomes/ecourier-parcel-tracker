@@ -20,7 +20,7 @@ class Appsero_Tracker {
 	 */
 	public static function init_tracker() {
 		if ( ! class_exists( 'Appsero\Client' ) ) {
-			require_once __DIR__ . '/appsero/src/Client.php';
+			require_once EPT_PATH . '/vendor/appsero/client/src/Client.php';
 		}
 
 		$client = new Client( 'b915a21e-b749-4d95-b04e-b4f83eec8ec8', 'Parcel Tracker eCourier', EPT_FILE );
